@@ -1,0 +1,201 @@
+.hero form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.auth-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* 주요 특징 섹션 */
+#features {
+    text-align: center;
+    background: #f4f4f4;
+    padding: 20px 0;
+}
+
+#features ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#features li {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#features li:hover {
+    transform: translateY(-5px);
+}
+
+/* 인기 숙소 섹션 */
+#popular-listings {
+    padding: 20px 0;
+}
+
+#listings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.listing-card {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.listing-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.listing-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.badge {
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.heart-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 숙소 종류 섹션 */
+#accommodation-types ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+#accommodation-types li {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#accommodation-types li:hover {
+    transform: translateY(-5px);
+}
+
+/* 지도 뷰 섹션 */
+#map-view {
+    padding: 20px 0;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+    .hero form {
+        flex-direction: column;
+    }
+
+    .listing-card, .container ul {
+        width: 100%;
+    }
+}
+
+@media (min-width: 601px) {
+    .listing-card {
+        width: 45%;
+    }
+
+    .container ul {
+        flex-direction: row;
+    }
+}
+
+/* 공통 스타일링 */
+.auth-container, .mypage-container, .detail-container, .host-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.auth-container h2, .mypage-container h2, .mypage-container h3, .detail-container h2, .host-container h2 {
+    text-align: center;
+}
+
+.auth-container form, .mypage-container .section ul, .detail-container form, .host-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-container form input, .auth-container form button, .mypage-container button, .auth-container button, .detail-container form input, .detail-container form button, .host-container form input, .host-container form textarea, .host-container form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* 기존 스타일 유지 */

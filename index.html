@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">청결과 보안의 새로운 기준, Stay Clean</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- 언어 선택 메뉴 -->
+    <select id="language-selector">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+    </select>
+    <!-- 헤더 -->
+    <header class="hero">
+        <img src="images/sc_logo.png" alt="Stay Clean 로고" id="logo" onclick="window.location.href='index.html'">
+        <h1 data-translate="title">청결과 보안의 새로운 기준, Stay Clean</h1>
+        <form id="search-form">
+            <input type="text" placeholder="위치" id="location" data-translate="searchPlaceholder">
+            <input type="date" id="checkin" data-translate="checkin">
+            <input type="date" id="checkout" data-translate="checkout">
+            <input type="number" placeholder="인원 수" id="guests" data-translate="guests">
+            <button type="submit" data-translate="searchButton">검색</button>
+        </form>
+        <div class="auth-buttons">
+            <button onclick="location.href='signup.html'" data-translate="signup">회원가입</button>
+            <button onclick="location.href='login.html'" data-translate="login">로그인</button>
+            <button onclick="location.href='mypage.html'" data-translate="mypage">마이페이지</button>
+            <button onclick="location.href='host_signup.html'" data-translate="becomeHost">호스트 되기</button> <!-- 호스트 되기 버튼 추가 -->
+        </div>
+    </header>
+
+    <!-- 주요 특징 -->
+    <section id="features" class="container">
+        <h2 data-translate="featuresTitle">주요 특징</h2>
+        <ul>
+            <li data-translate="cleanManagement">청결 관리</li>
+            <li data-translate="smartSecurity">스마트 보안</li>
+            <li data-translate="badgeSystem">'귤 뱃지' 시스템</li>
+        </ul>
+    </section>
+
+    <!-- 인기 숙소 -->
+    <section id="popular-listings" class="container">
+        <h2 data-translate="popularListingsTitle">인기 숙소</h2>
+        <div id="listings">
+            <!-- 숙소 카드가 여기에 표시됩니다. -->
+        </div>
+    </section>
+
+    <!-- 숙소 종류 -->
+    <section id="accommodation-types" class="container">
+        <h2 data-translate="accommodationTypesTitle">숙소 종류</h2>
+        <ul>
+            <li><a href="type.html?type=officetel" data-translate="officetel">오피스텔</a></li>
+            <li><a href="type.html?type=oneroom" data-translate="oneroom">원룸</a></li>
+            <li><a href="type.html?type=tworoom" data-translate="tworoom">투룸</a></li>
+            <li><a href="type.html?type=house" data-translate="house">별장</a></li>
+            <li><a href="type.html?type=apartment" data-translate="apartment">아파트</a></li>
+        </ul>
+    </section>
+
+    <!-- 지도 뷰 -->
+    <section id="map-view">
+        <h2 data-translate="mapViewTitle">지도 뷰</h2>
+        <div id="map"></div>
+    </section>
+
+    <footer>
+        <p data-translate="footerText">© 2024 Stay Clean. All rights reserved.</p>
+    </footer>
+</body>
+</html>
